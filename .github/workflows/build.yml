@@ -24,6 +24,8 @@ jobs:
         run: |
           yarn install
           yarn build
+        env:
+          NODE_OPTIONS: --openssl-legacy-provider
       - name: commit change & push
         run: |
           git config user.name 'github-actions[bot]'
